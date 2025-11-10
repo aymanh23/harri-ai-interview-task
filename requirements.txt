@@ -1,6 +1,5 @@
 fastapi
 uvicorn
-google-generativeai
 scikit-learn
 numpy
 pandas
@@ -8,3 +7,6 @@ python-dotenv
 gradio
 jinja2
 jupyter
+ipykernel
+jupyterlab
+google-genai
