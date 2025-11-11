@@ -10,3 +10,7 @@ jupyter
 ipykernel
 jupyterlab
 google-genai
+seaborn
+sentence-transformers
+matplotlib
+joblib
