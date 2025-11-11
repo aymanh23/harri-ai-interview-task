@@ -9,7 +9,8 @@ class Settings(BaseModel):
     version: str = "1.0.0"
 
     # model artifacts
-    model_path: Path = BASE_DIR / "app" / "ml" / "models" / "intent_pipeline.joblib"
+    # model_path: Path = BASE_DIR / "app" / "ml" / "models" / "intent_pipeline.joblib"
+    model_path: Path = BASE_DIR / "app" / "ml" / "models" / "intent_pipeline_calibrated.joblib"
 
     # data sources
     kb_dir: Path = BASE_DIR / "app" / "data" / "kb"
