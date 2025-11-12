@@ -61,8 +61,5 @@ class IntentClassifier:
             "probabilities": probs,
         }
 
-    
-
-
 # singleton
 classifier = IntentClassifier().load()
