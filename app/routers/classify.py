@@ -10,23 +10,17 @@ class ClassifyRequest(BaseModel):
     query: str = Field(..., min_length=2, description="User message")
 
 class ClassifyResponse(BaseModel):
-    intent: str
-    confidence: float
-    decision: str  # "route" | "clarify" | "out_of_scope"
+    intents: list
+    probabilities: list
+
 
 @router.post("/", response_model=ClassifyResponse)
 def classify(req: ClassifyRequest):
     try:
         result = classifier.predict(req.query)
-        intent = result["label"]
-        conf = result["confidence"]
+        intents = result["intents"]
+        probabilities = result["probabilities"]
 
-        # simple policy: if low confidence -> clarify/out_of_scope bucket
-        if conf < settings.min_confidence:
-            decision = "clarify" if intent != "out_of_scope" else "out_of_scope"
-        else:
-            decision = "route" if intent != "out_of_scope" else "out_of_scope"
-
-        return ClassifyResponse(intent=intent, confidence=conf, decision=decision)
+        return ClassifyResponse(intents=intents, probabilities=probabilities)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"classification error: {e}")

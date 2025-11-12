@@ -1,8 +1,7 @@
-# app/main.py
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config.settings import settings
-from app.routers import classify  # we'll add others later
+from app.routers import classify, generate
 
 app = FastAPI(title=settings.app_name, version=settings.version)
 
@@ -18,3 +17,4 @@ def health():
 
 # include routers
 app.include_router(classify.router, prefix="/classify", tags=["classify"])
+app.include_router(generate.router, prefix="/generate", tags=["generate"])

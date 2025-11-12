@@ -14,3 +14,8 @@ seaborn
 sentence-transformers
 matplotlib
 joblib
+pydantic
+pydantic-settings
+langchain
+langchain-community
+chromadb
