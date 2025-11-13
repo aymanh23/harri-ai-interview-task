@@ -4,7 +4,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from app.config.settings import settings
-from app.core.kb_processing import MarkdownChunker
+from app.core.kb.kb_processing import MarkdownChunker
 
 def _read(path: Path) -> str:
     return path.read_text(encoding="utf-8", errors="ignore")
@@ -32,7 +32,6 @@ def build_kb():
         persist_directory=str(chroma_dir),
     )
     db.persist()
-    print(f"✅ Built KB with {len(all_docs)} chunks → {chroma_dir}")
+    print(f" Built KB with {len(all_docs)} chunks → {chroma_dir}")
 
-if __name__ == "__main__":
-    build_kb()
+

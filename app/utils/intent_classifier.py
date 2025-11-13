@@ -1,4 +1,3 @@
-from __future__ import annotations
 from typing import Dict, Any
 import joblib
 import numpy as np
@@ -13,7 +12,6 @@ class IntentClassifier:
     def load(self):
         if self.pipeline is None:
             bundle = joblib.load(self.model_path)
-            # support both “pure pipeline” and “dict with meta”
             if isinstance(bundle, dict) and "pipeline" in bundle:
                 self.pipeline = bundle["pipeline"]
                 self.label_names = bundle.get("label_names")

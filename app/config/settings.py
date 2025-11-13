@@ -16,7 +16,7 @@ class Settings(BaseModel):
     # data sources
     kb_dir: Path = BASE_DIR / "app" / "data" / "kb"
     data_path : Path = BASE_DIR / "app" / "data" 
-    chroma_dir : Path = BASE_DIR / "app" / "data" / "chroma"
+    chroma_dir : Path = data_path / "chroma"
 
     # feedback file 
     feedback_file : Path = data_path / "feedback_logs.jsonl"
