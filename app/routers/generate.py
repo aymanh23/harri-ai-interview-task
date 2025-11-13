@@ -4,10 +4,11 @@ from app.utils.intent_classifier import classifier
 from app.utils.retriever import KBRetriever, DynamicRetriever
 from app.config.settings import settings
 from pydantic import BaseModel, Field
-from app.utils.llm import chat 
+from app.core.llm.llm import LLM
 
 router = APIRouter()
 retriever = None
+llm = LLM()
 
 class QueryIn(BaseModel):
     query: str
@@ -24,10 +25,12 @@ def generate(body: QueryIn) -> Output:
     pred = classifier.predict(body.query, prob_threshold=settings.min_confidence)
     intents = pred.get("intents", [])
     probs = pred.get("probabilities", [])
+
+
     
     # if out of scope, skip the retrieval process and directly generate a response with the llm
     if intents and intents[0] == "out_of_scope":
-        llm_result = chat(body.query,intents,[])
+        llm_result = llm.generate(body.query,intents,[])
         return Output(
             llm=llm_result,
             intents=intents,
@@ -48,7 +51,7 @@ def generate(body: QueryIn) -> Output:
         all_hits.extend(hits)
 
     # call llm 
-    llm_result = chat(body.query,intents,all_hits)
+    llm_result = llm.generate(body.query,intents,all_hits)
 
 
     return Output(
