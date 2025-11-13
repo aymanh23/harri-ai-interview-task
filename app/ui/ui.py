@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://localhost:8000/generate"  # your FastAPI endpoint
+API_URL = "http://localhost:8000/generate"  
 
 
 # -----------------------------------------------------
@@ -9,7 +9,7 @@ API_URL = "http://localhost:8000/generate"  # your FastAPI endpoint
 # -----------------------------------------------------
 
 st.set_page_config(
-    page_title="Harri Engineering Assistant",
+    page_title="Harri Assistant",
     page_icon="🤖",
     layout="centered"
 )
@@ -48,8 +48,6 @@ with st.sidebar:
         st.subheader("Raw LLM Output")
         st.json(st.session_state.debug_info.get("raw_llm"))
 
-        st.subheader("Built Prompt")
-        st.code(st.session_state.debug_info.get("prompt"), language="markdown")
 
     st.markdown("---")
     if st.button("Clear Conversation"):
@@ -62,11 +60,10 @@ with st.sidebar:
 # RENDER CHAT HISTORY
 # -----------------------------------------------------
 
-for msg in st.session_state.messages:
+for i, msg in enumerate(st.session_state.messages):
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-        # show citations under assistant message
         if msg["role"] == "assistant" and msg.get("citations"):
             st.markdown("**References:**")
             for c in msg["citations"]:
@@ -74,6 +71,57 @@ for msg in st.session_state.messages:
                     st.markdown(f"- `{c['source']} — {c['section']}`")
                 else:
                     st.markdown(f"- `{c['source']}`")
+
+        # ----------------------------
+        # CLEAN FEEDBACK UI
+        # ----------------------------
+        if msg["role"] == "assistant":
+
+            st.markdown(
+                """
+                <div style="margin-top: -10px; margin-bottom: 8px; font-weight: 600; font-size: 16px;">
+                    Was this helpful?
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+            # Inline button layout
+            c1, c2, _ = st.columns([1,1,8])
+
+            yes_clicked = c1.button("👍 Yes", key=f"fb_yes_{i}")
+            no_clicked = c2.button("👎 No", key=f"fb_no_{i}")
+
+            # YES → send minimal feedback
+            if yes_clicked:
+                requests.post(
+                    "http://localhost:8000/feedback",
+                    json={
+                        "query": st.session_state.messages[i - 1]["content"],
+                        "answer": msg["content"],
+                        "helpful": True,
+                        "details": None
+                    }
+                )
+                st.success("Thanks! Your feedback was recorded.")
+
+            # NO → reveal text box & submit button inline (clean)
+            if no_clicked:
+                reason = st.text_area("What went wrong?", key=f"fb_reason_{i}")
+
+                if st.button("Submit Feedback", key=f"fb_submit_{i}"):
+                    requests.post(
+                        "http://localhost:8000/feedback",
+                        json={
+                            "query": st.session_state.messages[i - 1]["content"],
+                            "answer": msg["content"],
+                            "helpful": False,
+                            "details": reason
+                        }
+                    )
+                    st.warning("Thanks — we'll use your feedback to improve.")
+
+
 
 
 # -----------------------------------------------------

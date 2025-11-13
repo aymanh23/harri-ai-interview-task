@@ -4,7 +4,6 @@ scikit-learn
 numpy
 pandas
 python-dotenv
-gradio
 jinja2
 jupyter
 ipykernel

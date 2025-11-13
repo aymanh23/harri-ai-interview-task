@@ -19,7 +19,6 @@ class Output(BaseModel):
     retrievals: List[Any]
     
 
-
 @router.post("/")
 def generate(body: QueryIn) -> Output:
     pred = classifier.predict(body.query, prob_threshold=settings.min_confidence)

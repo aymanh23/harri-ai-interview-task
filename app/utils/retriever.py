@@ -27,7 +27,6 @@ class KBRetriever:
             out.append({
                 "content": r.page_content,
                 "source": r.metadata.get("source"),
-                # "intent": r.metadata.get("intent"),
                 "section": r.metadata.get("section"),
                 "chunk_id": r.metadata.get("chunk_id"),
             })
@@ -57,5 +56,3 @@ class DynamicRetriever:
             "source": data.get("source"),
             "fetched_at": data.get("fetched_at"),
         }]
-
-
