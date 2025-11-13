@@ -1,12 +1,8 @@
 from pathlib import Path
 from typing import List
-from sentence_transformers import SentenceTransformer
 from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
 from langchain_community.embeddings import SentenceTransformerEmbeddings
-
-
-
 from app.config.settings import settings
 from app.core.kb_processing import MarkdownChunker
 
@@ -18,7 +14,7 @@ def build_kb():
     chroma_dir = settings.chroma_dir
     chroma_dir.mkdir(parents=True, exist_ok=True)
 
-    model = SentenceTransformer(settings.kb_model_name)
+    embedding_model = SentenceTransformerEmbeddings(model_name=settings.kb_model_name)
     chunker = MarkdownChunker(settings.kb_chunk_size, settings.kb_chunk_overlap)
 
     all_docs: List[Document] = []
@@ -29,15 +25,10 @@ def build_kb():
         for ch in chunks:
             all_docs.append(Document(page_content=ch.content, metadata=ch.metadata))
 
-    # def embed_fn(texts: List[str]):
-    #     return model.encode(texts, normalize_embeddings=True).tolist()
-
-    embed_fn = SentenceTransformerEmbeddings(model_name=settings.kb_model_name)
-
     # persist new DB fresh (simple approach); for incremental, clear selectively
     db = Chroma.from_documents(
         documents=all_docs,
-        embedding=embed_fn,
+        embedding=embedding_model,
         persist_directory=str(chroma_dir),
     )
     db.persist()

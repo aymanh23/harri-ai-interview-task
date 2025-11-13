@@ -52,7 +52,7 @@ class IntentClassifier:
             top_idx = int(np.argmax(proba))
             selected = [(classes[top_idx], float(proba[top_idx]))]
 
-        # 7️⃣ Prepare response
+        # 7️⃣ Prepare result
         intents = [cls for cls, _ in selected]
         probs = [round(p, 3) for _, p in selected]
 

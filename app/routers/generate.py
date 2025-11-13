@@ -4,7 +4,7 @@ from app.utils.intent_classifier import classifier
 from app.utils.retriever import KBRetriever, DynamicRetriever
 from app.config.settings import settings
 from pydantic import BaseModel, Field
-from app.config.settings import settings
+from app.utils.llm import chat 
 
 router = APIRouter()
 retriever = None
@@ -12,20 +12,29 @@ retriever = None
 class QueryIn(BaseModel):
     query: str
 
+class Output(BaseModel):
+    llm: Any
+    intents: List[str]
+    probabilities: List[float]
+    retrievals: List[Any]
+    
+
+
 @router.post("/")
-def generate(body: QueryIn) -> Dict[str, Any]:
+def generate(body: QueryIn) -> Output:
     pred = classifier.predict(body.query, prob_threshold=settings.min_confidence)
     intents = pred.get("intents", [])
     probs = pred.get("probabilities", [])
-
     
+    # if out of scope, skip the retrieval process and directly generate a response with the llm
     if intents and intents[0] == "out_of_scope":
-        return {
-            "intents": intents, "probabilities": probs,
-            "decision": "clarify",
-            "answer": "This seems outside my scope. Could you clarify what you need?",
-            "sources": []
-        }
+        llm_result = chat(body.query,intents,[])
+        return Output(
+            llm=llm_result,
+            intents=intents,
+            probabilities=probs,
+            retrievals=[]
+            )
 
     # retrieve per intent and merge
     all_hits: List[Dict[str, Any]] = []
@@ -39,8 +48,14 @@ def generate(body: QueryIn) -> Dict[str, Any]:
         hits = retriever.search(body.query, intent=it)
         all_hits.extend(hits)
 
-    return {
-        "intents": intents,
-        "probabilities": probs,
-        "retrievals": all_hits,
-    }
+    # call llm 
+    llm_result = chat(body.query,intents,all_hits)
+
+
+    return Output(
+        llm=llm_result,
+        intents=intents,
+        probabilities=probs,
+        retrievals=all_hits
+        )
+
