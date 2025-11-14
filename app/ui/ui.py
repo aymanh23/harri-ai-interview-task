@@ -42,6 +42,9 @@ with st.sidebar:
         st.subheader("Intents")
         st.json(st.session_state.debug_info.get("intents"))
 
+        st.subheader("Probabilities ")
+        st.json(st.session_state.debug_info.get("probabilities"))
+
         st.subheader("Retrievals")
         st.json(st.session_state.debug_info.get("retrievals"))
 
@@ -54,6 +57,8 @@ with st.sidebar:
         st.session_state.messages = []
         st.session_state.debug_info = None
         st.rerun()
+    
+    
 
 
 # -----------------------------------------------------

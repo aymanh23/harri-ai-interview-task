@@ -1,6 +1,6 @@
 from typing import List, Dict, Optional
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
 from app.config.settings import settings
 from app.core.mock_api import get_employee_info, get_jira_tickets , get_deployments
 

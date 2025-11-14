@@ -18,9 +18,11 @@ class Settings(BaseModel):
     data_path : Path = BASE_DIR / "app" / "data" 
     chroma_dir : Path = data_path / "chroma"
 
-    # feedback file 
-    feedback_file : Path = data_path / "feedback_logs.jsonl"
-
+    # log directory and files 
+    log_dir : Path = BASE_DIR / "app" / "logs"
+    query_log_file : Path = log_dir / "query_logs.jsonl"
+    feedback_log_file : Path = log_dir / "feedback_logs.jsonl"
+    error_log_file : Path = log_dir / "error_logs.jsonl"
 
     # retrieval config
     kb_chunk_size: int = 500
@@ -30,7 +32,9 @@ class Settings(BaseModel):
     # router thresholds
 
     # intents with probability less than this value will not be considered
-    min_confidence: float = 0.1  
+    min_confidence: float = 0.55        # below this → probably OOS
+    oos_min_prob: float = 0.35          # min prob to trust "out_of_scope"
+    oos_min_margin: float = 0.15        # how much higher than 2nd-best it must be
     # mapping of intents to data files
     static_data_intents: Set[str] = {"deployment_process","code_review_policy","escalation_policy","onboarding_guide","team_structure"}
     dynamic_data_intent: Set[str]= {"deployment_history","employees_info","jira_ticket_status"}
