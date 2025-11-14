@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 import json
 from pathlib import Path
-from app.config.settings import settings
+from app.settings import settings
 
 router = APIRouter()
 

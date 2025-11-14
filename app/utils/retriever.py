@@ -1,27 +1,29 @@
 from typing import List, Dict, Optional
 from langchain_chroma import Chroma
-from langchain_huggingface import HuggingFaceEmbeddings
-from app.config.settings import settings
-from app.core.mock_api import get_employee_info, get_jira_tickets , get_deployments
+from langchain_community.embeddings import SentenceTransformerEmbeddings
+from app.settings import settings
+from app.mock_api import get_employee_info, get_jira_tickets , get_deployments
 
 
 class KBRetriever:
     def __init__(self):
         self.persist_dir = str(settings.chroma_dir)
         model_name = settings.kb_model_name
-        self.embeddings = HuggingFaceEmbeddings(model_name=model_name)
+        self.embeddings = SentenceTransformerEmbeddings(model_name=model_name)
         self.db = Chroma(
             persist_directory=self.persist_dir,
             embedding_function=self.embeddings,
         )
 
     def search(self, query: str, intent: str ) -> List[Dict]:
+        """
+        Fetches from chromadb kb based on intent.
+        Returns similiar chunks.
+        """
         k = settings.kb_k
-        # Optional metadata filter by intent (aligns with your classifier)
-        if intent:
-            results = self.db.similarity_search(query, k=k, filter={"intent": intent})
-        else:
-            results = self.db.similarity_search(query, k=k)
+        
+        
+        results = self.db.similarity_search(query, k=k, filter={"intent": intent})
         out = []
         for r in results:
             out.append({

@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, Any, List, Optional
-from app.config.settings import settings
+from app.settings import settings
 
 
 
@@ -42,10 +42,6 @@ def get_employee_info(
         "data": results or employees
     }
 
-
-# ─────────────────────────────────────────────────────────────
-# 2️⃣ JIRA TICKET STATUS LOOKUP
-# ─────────────────────────────────────────────────────────────
 def get_jira_tickets(
     query: Optional[str] = None,
     id: Optional[str] = None,
@@ -72,10 +68,6 @@ def get_jira_tickets(
         "data": results or tickets,
     }
 
-
-# ─────────────────────────────────────────────────────────────
-# 3️⃣ DEPLOYMENT HISTORY LOOKUP
-# ─────────────────────────────────────────────────────────────
 def get_deployments(
     query: Optional[str] = None,
     service: Optional[str] = None,

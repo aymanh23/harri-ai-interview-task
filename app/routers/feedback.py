@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 import time, json, os
-from app.config.settings import settings
+from app.settings import settings
 from app.utils.logger import Logger
 
 router = APIRouter()

@@ -2,7 +2,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 from app.utils.intent_classifier import classifier
-from app.config.settings import settings
+from app.settings import settings
 
 router = APIRouter()
 

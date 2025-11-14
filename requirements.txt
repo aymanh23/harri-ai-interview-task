@@ -20,4 +20,3 @@ langchain-community
 chromadb
 streamlit
 langchain-chroma
-langchain-huggingface

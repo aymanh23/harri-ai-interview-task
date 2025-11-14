@@ -2,9 +2,9 @@ from fastapi import APIRouter
 from typing import Dict, Any, List
 from app.utils.intent_classifier import classifier
 from app.utils.retriever import KBRetriever, DynamicRetriever
-from app.config.settings import settings
+from app.settings import settings
 from pydantic import BaseModel, Field
-from app.core.llm.llm import LLM
+from app.llm.llm import LLM
 from app.utils.logger import Logger 
 
 router = APIRouter()

@@ -4,9 +4,9 @@ from google import genai
 from google.genai import types
 from pydantic import BaseModel
 from typing import List, Optional
-from app.config.settings import settings
-from app.core.llm.system_instruction import system_instruction
-from app.core.llm.user_prompt import user_prompt_template
+from app.settings import settings
+from app.llm.system_instruction import system_instruction
+from app.llm.user_prompt import user_prompt_template
 
 load_dotenv()
 

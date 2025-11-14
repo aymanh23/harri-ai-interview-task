@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 from pathlib import Path
-from app.config.settings import settings
+from app.settings import settings
 
 
 class Logger:

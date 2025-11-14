@@ -1,7 +1,7 @@
 from typing import Dict, Any
 import joblib
 import numpy as np
-from app.config.settings import settings
+from app.settings import settings
 
 class IntentClassifier:
     def __init__(self, model_path: str | None = None):

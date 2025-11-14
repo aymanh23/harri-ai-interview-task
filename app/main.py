@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.config.settings import settings
+from app.settings import settings
 from app.routers import classify, generate, feedback, logs
+from app.chromaKB_build import build_kb
 import os 
 
 app = FastAPI(title=settings.app_name, version=settings.version)
