@@ -39,9 +39,9 @@ How can I make reviews more efficient?,code_review_policy
 What’s the review turnaround expectation?,code_review_policy
 How should CI/CD checks affect review readiness?,code_review_policy
 What are the reviewer’s main responsibilities?,code_review_policy
-"hey, what’s the review policy again?",code_review_policy
+"hey what’s the review policy again?",code_review_policy
 can you remind me how PR reviews work?,code_review_policy
-"yo, who approves my PRs?",code_review_policy
+"yo who approves my PRs?",code_review_policy
 need to check if two reviewers are needed,code_review_policy
 what’s the rule before merging to main?,code_review_policy
 pls show code review checklist,code_review_policy
@@ -125,7 +125,7 @@ Who do I contact after a failed deployment?,deployment_process
 How do I handle environment variable changes?,deployment_process
 Where can I find deployment documentation?,deployment_process
 What should I check after a rollback?,deployment_process
-Who is on-call for deployment support?,deployment_process
+Who is on-call for deployment support?,team_structure
 How do I verify deployment health?,deployment_process
 What command starts a staging deployment?,deployment_process
 Where do I post deployment status updates?,deployment_process
@@ -135,14 +135,14 @@ How do I document a failed deployment?,deployment_process
 What’s the correct rollback procedure?,deployment_process
 Where do I view previous deployment results?,deployment_process
 How do I test a deployment locally?,deployment_process
-"yo, how do i deploy this thing?",deployment_process
-"hey, what’s the prod deploy process again?",deployment_process
+"yo how do i deploy this thing?",deployment_process
+"hey what’s the prod deploy process again?",deployment_process
 anyone remember how to roll back a bad deploy?,deployment_process
 can you pull up the deploy steps?,deployment_process
 how do i check if deployment went through?,deployment_process
 pls show me the deployment guide,deployment_process
 do we announce in #deployments channel?,deployment_process
-"need to run deploy.sh, right?",deployment_process
+"need to run deploy.sh right?",deployment_process
 who’s allowed to push to prod?,deployment_process
 how do i know if staging build succeeded?,deployment_process
 how can i check recent deployments?,deployment_process
@@ -181,7 +181,6 @@ how does rollback automation work?,deployment_process
 who authorizes production rollouts?,deployment_process
 when should we avoid pushing new releases?,deployment_process
 what is the correct way to deploy microservices?,deployment_process
-how does the on-call engineer assist deployments?,deployment_process
 who monitors deployment success rates?,deployment_process
 show all commands related to deployment,deployment_process
 where can i see staging deployment logs?,deployment_process
@@ -230,12 +229,12 @@ What is the repository SSH clone command?,dev_env_setup
 How do I troubleshoot Docker errors?,dev_env_setup
 Where can I find the virtual environment folder?,dev_env_setup
 Who do I contact if setup scripts fail?,dev_env_setup
-"yo, how do i set up my dev env again?",dev_env_setup
-"hey, what python version do we need?",dev_env_setup
+"yo how do i set up my dev env again?",dev_env_setup
+"hey what python version do we need?",dev_env_setup
 can you remind me how to run docker compose?,dev_env_setup
 where do i grab the .env file from?,dev_env_setup
-"need to install deps for backend, right?",dev_env_setup
-"my docker isn’t running, what do i do?",dev_env_setup
+"need to install deps for backend right?",dev_env_setup
+"my docker isn’t running what do i do?",dev_env_setup
 can you pull up the setup guide?,dev_env_setup
 how do i fix broken venv?,dev_env_setup
 who’s the devops contact?,dev_env_setup
@@ -279,7 +278,6 @@ what happens if docker ps shows nothing?,dev_env_setup
 What is the escalation policy at Harri?,escalation_policy
 When should an issue be escalated?,escalation_policy
 Who is the first responder in an escalation?,escalation_policy
-How do I page the on-call engineer?,escalation_policy
 Where should I log incidents during escalation?,escalation_policy
 What types of issues require escalation?,escalation_policy
 Who should I contact for production outages?,escalation_policy
@@ -316,7 +314,7 @@ How are major incidents prioritized?,escalation_policy
 Who approves escalation communication?,escalation_policy
 How do I page engineering management?,escalation_policy
 What incidents are considered critical?,escalation_policy
-"hey, who’s on call right now?",escalation_policy
+"hey, who’s on call right now?",team_structure
 "yo, how do i escalate a prod issue?",escalation_policy
 what’s the pagerduty link again?,escalation_policy
 who do i ping for major outage?,escalation_policy
@@ -327,7 +325,6 @@ where do i post updates during an incident?,escalation_policy
 anyone know the escalation chain?,escalation_policy
 pls page the devops lead,escalation_policy
 how do i start an escalation?,escalation_policy
-where can i check who’s on-call?,escalation_policy
 how do i know if escalation is needed?,escalation_policy
 is there a list of escalation contacts?,escalation_policy
 what happens after i escalate an issue?,escalation_policy
@@ -361,7 +358,6 @@ who owns the escalation playbook?,escalation_policy
 when do we involve other departments?,escalation_policy
 how can i check previous escalation logs?,escalation_policy
 is there a blameless policy for escalations?,escalation_policy
-where can i find the on-call rotation?,escalation_policy
 how do i verify escalation ownership?,escalation_policy
 what’s the response SLA for escalations?,escalation_policy
 who ensures escalation communication is updated?,escalation_policy
@@ -371,7 +367,6 @@ who manages post-incident documentation?,escalation_policy
 how do i prepare a report for leadership?,escalation_policy
 what’s the follow-up action after incident resolution?,escalation_policy
 when should i call the secondary contact?,escalation_policy
-who’s the backup on-call engineer?,escalation_policy
 how do i confirm escalation was received?,escalation_policy
 What are the steps for developer onboarding at Harri?,onboarding_guide
 How do I request access to internal tools?,onboarding_guide
@@ -564,7 +559,7 @@ who reports to engineering director?,team_structure
 what’s the internal team structure?,team_structure
 who manages QA and automation?,team_structure
 how often is team structure updated?,team_structure
-"hey, how are you doing today?",out_of_scope
+hey how are you doing today?,out_of_scope
 what’s your favorite color?,out_of_scope
 do you like coffee or tea?,out_of_scope
 tell me a joke,out_of_scope
@@ -577,47 +572,6 @@ how old are you?,out_of_scope
 what’s the weather like today?,out_of_scope
 is it raining in new york?,out_of_scope
 what’s the temperature in london?,out_of_scope
-will it snow tomorrow?,out_of_scope
-what’s the forecast for this week?,out_of_scope
-how’s the weather in poland?,out_of_scope
-will it be sunny today?,out_of_scope
-should i bring an umbrella?,out_of_scope
-is it cold outside?,out_of_scope
-what’s the current humidity?,out_of_scope
-who sings shape of you?,out_of_scope
-recommend me a good movie,out_of_scope
-what’s trending on netflix?,out_of_scope
-who won the oscar last year?,out_of_scope
-tell me about the new taylor swift album,out_of_scope
-what’s a good comedy show to watch?,out_of_scope
-play some jazz music,out_of_scope
-who’s your favorite artist?,out_of_scope
-what’s the best movie of all time?,out_of_scope
-what songs are popular now?,out_of_scope
-what’s 23 times 45?,out_of_scope
-solve 5x + 3 = 18,out_of_scope
-what’s the square root of 144?,out_of_scope
-how many days are in a leap year?,out_of_scope
-what’s the capital of japan?,out_of_scope
-who invented the light bulb?,out_of_scope
-what’s the largest planet?,out_of_scope
-when was google founded?,out_of_scope
-what is pi to 10 digits?,out_of_scope
-how far is the moon from earth?,out_of_scope
-should i quit my job?,out_of_scope
-what’s the best diet plan?,out_of_scope
-how can i be more productive?,out_of_scope
-can you motivate me?,out_of_scope
-how do i learn guitar?,out_of_scope
-what’s the best way to fall asleep?,out_of_scope
-how to make friends easily?,out_of_scope
-what’s the healthiest food?,out_of_scope
-how can i stop procrastinating?,out_of_scope
-how do i get rich?,out_of_scope
-what is microsoft’s mission statement?,out_of_scope
-how do i apply to google?,out_of_scope
-who is the ceo of tesla?,out_of_scope
-what does apple stock cost today?,out_of_scope
 when did amazon start?,out_of_scope
 how much is netflix subscription?,out_of_scope
 tell me about openai,out_of_scope
@@ -634,8 +588,8 @@ what’s the distance from nyc to la?,out_of_scope
 tell me an interesting fact,out_of_scope
 how do i fix my phone?,out_of_scope
 what’s the latest iphone model?,out_of_scope
-"yo, what’s up?",out_of_scope
-"hey bro, how’s your day?",out_of_scope
+yo what’s up?,out_of_scope
+hey bro how’s your day?,out_of_scope
 you watching the game tonight?,out_of_scope
 do you know any memes?,out_of_scope
 can you tell me a riddle?,out_of_scope
@@ -644,263 +598,324 @@ are you single?,out_of_scope
 what language do you speak?,out_of_scope
 can you dance?,out_of_scope
 what do you think about ai?,out_of_scope
-Who is the Backend Lead at Harri?,employees_info
-Find the email address for Ahmed Ali.,employees_info
-Can you show me all the engineers on the backend team?,employees_info
-I need contact info for Fatima Khalil.,employees_info
-Which team does Sarah Odeh belong to?,employees_info
-Who manages the frontend team?,employees_info
-List all DevOps engineers.,employees_info
-Who should I contact for deployment issues?,employees_info
-Find all employees working under the DevOps department.,employees_info
-Show me everyone in management.,employees_info
-Who leads the backend development team?,employees_info
-Give me details for Leen Qasem.,employees_info
-What’s the role of Omar Shalabi?,employees_info
-Find the Jira username of Adam Smith.,employees_info
-Who is our Director of Engineering?,employees_info
-List everyone with the title 'Engineer'.,employees_info
-What is the team of Hossam Doleh?,employees_info
-Show me all frontend developers.,employees_info
-Who are the team leads in the company?,employees_info
-Find all employees in the Backend department.,employees_info
-Who works in the same team as Ahmed Ali?,employees_info
-What is the email of the DevOps Lead?,employees_info
-Who reports to the CTO?,employees_info
-Can you list everyone in the engineering department?,employees_info
-Show contact info for the DevOps Engineer.,employees_info
-Who is the Senior Backend Engineer?,employees_info
-What’s the role of Noor Jaber?,employees_info
-Who should I reach out to for frontend bugs?,employees_info
-Find the team structure for Harri employees.,employees_info
-Which department handles deployments?,employees_info
-List the names and emails of all leads.,employees_info
-Who is currently responsible for DevOps operations?,employees_info
-Give me all Jira usernames and their corresponding employees.,employees_info
-Who can I contact in the Backend team?,employees_info
-Who leads the DevOps team?,employees_info
-List everyone in Management.,employees_info
-Find all people who have 'Engineer' in their title.,employees_info
-Who handles backend code reviews?,employees_info
-Find all employees whose email ends with '@harri.com'.,employees_info
-Who is in charge of technical leadership?,employees_info
-Show all current employees at Harri.,employees_info
-"hey, who’s the devops lead again?",employees_info
-looking for john’s contact info,employees_info
-can you pull up everyone in HR?,employees_info
-email for fatima?,employees_info
-who’s managing the backend folks?,employees_info
-"yo, need the director’s email",employees_info
-pls find omar’s role,employees_info
-any idea who’s in frontend?,employees_info
-pull up the management staff list,employees_info
-show me who’s on the devops team,employees_info
-how do i look up an employee?,employees_info
-where can i check who’s on the frontend team?,employees_info
-find employee info by name,employees_info
-do we have a list of company staff?,employees_info
-how can i get someone’s contact info?,employees_info
-how to see who’s in which team?,employees_info
-can i search employees by department?,employees_info
-how do i know who reports to who?,employees_info
-is there a way to check team members?,employees_info
-where’s the company directory?,employees_info
-list all staff in backend team,employees_info
-who are the people in QA?,employees_info
-show company personnel under marketing,employees_info
-find all technical staff,employees_info
-show me our engineering colleagues,employees_info
-list all members of management,employees_info
-who are the personnel in devops?,employees_info
-who’s part of the leadership team?,employees_info
-get me everyone from engineering staff,employees_info
-pull all people from frontend department,employees_info
-list everyone from backend section,employees_info
-who’s handling infrastructure currently?,employees_info
-who’s part of company leadership?,employees_info
-do we have new hires in engineering?,employees_info
-show me the dev team lineup,employees_info
-who’s in the tech org chart?,employees_info
-list personnel grouped by department,employees_info
-anyone from QA available?,employees_info
-which team does fatima belong to again?,employees_info
-find all colleagues under backend,employees_info
-who’s assigned to devops in jira?,employees_info
-do we have anyone in the design team?,employees_info
-list company staff directory,employees_info
-who’s the head of engineering?,employees_info
-give me details about technical personnel,employees_info
-where can i check employee hierarchy?,employees_info
-What is the status of ticket HARRI-123?,jira_ticket_status
-Check ticket HARRI-128 for updates.,jira_ticket_status
-Show me all open Jira tickets.,jira_ticket_status
-Which tickets are currently in progress?,jira_ticket_status
-List all high-priority Jira issues.,jira_ticket_status
-Who is assigned to ticket HARRI-124?,jira_ticket_status
-Get the summary for Jira task HARRI-125.,jira_ticket_status
-What’s the current priority of ticket HARRI-127?,jira_ticket_status
-Find all tickets assigned to Ahmed Ali.,jira_ticket_status
-Show tickets assigned to 'adam_s'.,jira_ticket_status
-Which ticket is blocking deployments?,jira_ticket_status
-Give me open tickets related to backend.,jira_ticket_status
-Display all critical Jira issues.,jira_ticket_status
-Which tickets are pending review?,jira_ticket_status
-Show tickets assigned to frontend engineers.,jira_ticket_status
-List Jira tickets that failed QA.,jira_ticket_status
-Which tasks are currently assigned to Lina?,jira_ticket_status
-What is the highest priority issue open right now?,jira_ticket_status
-Can you tell me the details of ticket HARRI-126?,jira_ticket_status
-Find all tickets with ‘deployment’ in summary.,jira_ticket_status
-Show me open tickets owned by backend leads.,jira_ticket_status
-Which tickets are still unresolved?,jira_ticket_status
-Give me all tickets marked as critical.,jira_ticket_status
-Who’s working on ticket HARRI-128?,jira_ticket_status
-What’s the progress on the dark mode ticket?,jira_ticket_status
-List all medium-priority Jira tasks.,jira_ticket_status
-Which tickets are assigned to the DevOps team?,jira_ticket_status
-Show all tickets that mention ‘pipeline’.,jira_ticket_status
-Which tasks are related to onboarding flow?,jira_ticket_status
-Check all issues owned by ‘fatima_k’.,jira_ticket_status
-Which tickets are waiting for deployment?,jira_ticket_status
-What is the status of the payments issue?,jira_ticket_status
-List tickets created this week.,jira_ticket_status
-Find any ticket related to CI/CD.,jira_ticket_status
-Show in-progress Jira tickets.,jira_ticket_status
-Which open tickets have critical priority?,jira_ticket_status
-Get details of ticket HARRI-129.,jira_ticket_status
-Who’s handling the onboarding bug?,jira_ticket_status
-Find tickets currently assigned to Leen.,jira_ticket_status
-List all open and high-priority issues.,jira_ticket_status
-"yo, what’s up with HARRI-128?",jira_ticket_status
-hey check HARRI-125 please,jira_ticket_status
-any update on the deployment ticket?,jira_ticket_status
-can you pull jira status for onboarding bug?,jira_ticket_status
-what’s happening with the pipeline task?,jira_ticket_status
-pls show all open jira issues,jira_ticket_status
-need to see tickets assigned to adam,jira_ticket_status
-status for harri 123?,jira_ticket_status
-which tickets are stuck?,jira_ticket_status
-show everything tagged critical,jira_ticket_status
-how do i check jira ticket progress?,jira_ticket_status
-where can i see open issues?,jira_ticket_status
-find ticket details by id,jira_ticket_status
-how do i know who owns a ticket?,jira_ticket_status
-show pending work items in jira,jira_ticket_status
-list recent jira tasks,jira_ticket_status
-can i get all tickets for backend team?,jira_ticket_status
-how to find who’s assigned to an issue?,jira_ticket_status
-any tickets left unresolved?,jira_ticket_status
-show jira board status,jira_ticket_status
-get me all bug reports in jira,jira_ticket_status
-which tasks are still open?,jira_ticket_status
-find all project issues assigned to devops,jira_ticket_status
-who’s responsible for CI/CD tickets?,jira_ticket_status
-list all tasks related to frontend dashboard,jira_ticket_status
-show bugs tagged with high severity,jira_ticket_status
-fetch jira data for payments service,jira_ticket_status
-who is handling open tasks in engineering?,jira_ticket_status
-get open tickets per assignee,jira_ticket_status
-which jira items are waiting review?,jira_ticket_status
-list all unassigned tickets,jira_ticket_status
-show me jira issues by priority,jira_ticket_status
-any ticket for adam_s marked critical?,jira_ticket_status
-check progress on all tasks tagged ‘onboarding’,jira_ticket_status
-give jira summary for all open work items,jira_ticket_status
-which issues are under testing phase?,jira_ticket_status
-find jira entries that mention docker,jira_ticket_status
-show me jira updates for this sprint,jira_ticket_status
-tickets waiting for QA approval?,jira_ticket_status
-what tickets are marked as failed?,jira_ticket_status
-give me jira task details for harri 126,jira_ticket_status
-how many issues are currently active?,jira_ticket_status
-list open jira issues assigned to QA,jira_ticket_status
-show unresolved bugs in project,jira_ticket_status
-any tickets tagged deployment?,jira_ticket_status
-show recent jira tickets related to onboarding,jira_ticket_status
-fetch jira ticket HARRI-124 info,jira_ticket_status
-Show me the latest deployment status.,deployment_history
-What was the result of the last deployment?,deployment_history
-List all recent deployments.,deployment_history
-Which deployments failed this week?,deployment_history
-When was the last successful deployment for payments?,deployment_history
-Give me deployment details for the backend service.,deployment_history
-What version was deployed for onboarding?,deployment_history
-Show all successful deployments in July.,deployment_history
-Which service had a failed deployment recently?,deployment_history
-List deployments for the frontend application.,deployment_history
-Find the deployment history for onboarding service.,deployment_history
-Get the latest version deployed to production.,deployment_history
-Which deployments were successful today?,deployment_history
-What’s the status of the latest backend release?,deployment_history
-Show me deployment logs for payments service.,deployment_history
-Which deployments happened on July 5th?,deployment_history
-Find failed deployments from last month.,deployment_history
-Get me all deployment versions for backend.,deployment_history
-List deployments sorted by date.,deployment_history
-Show successful production deployments.,deployment_history
-When was the onboarding app last updated?,deployment_history
-Which services were deployed this week?,deployment_history
-Show all production deployment results.,deployment_history
-Which deployment had errors?,deployment_history
-Find deployment results by service name.,deployment_history
-What’s the latest deployment version for frontend?,deployment_history
-Get details of backend deployments in July.,deployment_history
-Show recent production rollouts.,deployment_history
-Find deployment records for payments.,deployment_history
-Which deployment versions failed recently?,deployment_history
-Get list of all deployment attempts.,deployment_history
-What deployments succeeded on July 1st?,deployment_history
-Show me the most recent release notes.,deployment_history
-Which environments had new deployments today?,deployment_history
-Find all deployments made in July 2025.,deployment_history
-Which deployment failed for backend v3.4.9?,deployment_history
-Show all deployments by service type.,deployment_history
-Find deployments tagged as successful.,deployment_history
-List every service deployed recently.,deployment_history
-When was the backend last deployed successfully?,deployment_history
-"yo, did the last deployment go fine?",deployment_history
-any failed deploys today?,deployment_history
-what’s up with the payments deployment?,deployment_history
-show me what got deployed last night,deployment_history
-did onboarding deploy successfully?,deployment_history
-pls pull the last few deployments,deployment_history
-was there a failed deployment this morning?,deployment_history
-show history for backend releases,deployment_history
-did the frontend push go through?,deployment_history
-what version got deployed today?,deployment_history
-how do i check recent deployments?,deployment_history
-where can i see deployment results?,deployment_history
-find deployment history by service name,deployment_history
-any deployments made recently?,deployment_history
-how do i know if deployment succeeded?,deployment_history
-list all past deployment activities,deployment_history
-can i get status of last few releases?,deployment_history
-show timeline of deployments,deployment_history
-get deployment summary for this week,deployment_history
-find out which versions are live now,deployment_history
-show devops deployment log,deployment_history
-list production releases from last week,deployment_history
-get release data for all services,deployment_history
-fetch deployment summary for staging,deployment_history
-what services were deployed yesterday?,deployment_history
-pull history of production pushes,deployment_history
-show all app versions currently deployed,deployment_history
-which deployments were rolled back?,deployment_history
-get me all deployment attempts for backend,deployment_history
-was there a rollback recently?,deployment_history
-show me all July deployments sorted by status,deployment_history
-any deployments failed during July 2025?,deployment_history
-find deployment results for frontend service,deployment_history
-show list of all staging deployments,deployment_history
-was payments deployed successfully on July 5?,deployment_history
-which releases were marked successful?,deployment_history
-show recent release activity across services,deployment_history
-pull up the deployment summary for onboarding,deployment_history
-which version of backend was deployed most recently?,deployment_history
-what deployments occurred between June 27 and July 5?,deployment_history
-any failed rollouts reported?,deployment_history
-show latest deployment outcome for each service,deployment_history
-get last deployment version of every app,deployment_history
-list deployment dates for payments,deployment_history
-who triggered the latest deployment?,deployment_history
-when did backend v3.5.0 go live?,deployment_history
+can you reset my github password?,out_of_scope
+i forgot my slack password can you change it?,out_of_scope
+can you login to my jira account?,out_of_scope
+disable mfa on my harri account,out_of_scope
+unlock my okta account please,out_of_scope
+generate a recovery code for my account,out_of_scope
+rotate my aws iam credentials,out_of_scope
+send me my api key,out_of_scope
+approve my 2fa request,out_of_scope
+create an sso login token for me,out_of_scope
+deploy the service to production now,out_of_scope
+roll back today’s release,out_of_scope
+reboot the production database,out_of_scope
+scale down the ecs cluster by 50%,out_of_scope
+restart the backend server,out_of_scope
+apply terraform changes to prod,out_of_scope
+modify the kubernetes deployment,out_of_scope
+kill the stuck pod in prod namespace,out_of_scope
+clear the redis cluster cache,out_of_scope
+delete the s3 bucket named logs,out_of_scope
+push this code to main branch,out_of_scope
+approve my pull request automatically,out_of_scope
+merge PR #42 automatically,out_of_scope
+edit the code in harri-platform repo,out_of_scope
+overwrite the ci pipeline config,out_of_scope
+update all docker images to latest,out_of_scope
+change env variables in production,out_of_scope
+grant me admin access to grafana,out_of_scope
+add a new backend api route,out_of_scope
+modify the database schema,out_of_scope
+hire a new devops engineer,out_of_scope
+approve my vacation request,out_of_scope
+update my payroll info,out_of_scope
+what is my salary at harri?,out_of_scope
+can you fire michael?,out_of_scope
+access employee personal records,out_of_scope
+submit an hr complaint,out_of_scope
+create a new employee account,out_of_scope
+update my home address,out_of_scope
+send my payslip,out_of_scope
+what is netflix's architecture?,out_of_scope
+explain how uber dispatch system works?,out_of_scope
+how does airbnb handle payments?,out_of_scope
+show tesla autopilot source code?,out_of_scope
+how does spotify recommendation algorithm work?,out_of_scope
+what api does paypal use?,out_of_scope
+explain google search algorithm,out_of_scope
+scan the internet for vulnerabilities,out_of_scope
+run a penetration test on harri servers,out_of_scope
+download logs from production servers,out_of_scope
+ssh into the backend servers,out_of_scope
+monitor real-time network traffic,out_of_scope
+compile and execute code remotely,out_of_scope
+subscribe to kafka topics and show messages,out_of_scope
+connect to the vpn and fetch secrets,out_of_scope
+run sql queries directly on prod,out_of_scope
+create a new jira project for me,out_of_scope
+add me to the devops slack channel,out_of_scope
+trigger the github actions workflow,out_of_scope
+add a field to the user table,out_of_scope
+run database migrations,out_of_scope
+Who is the Backend Lead at Harri?,employees
+Find the email address for Ahmed Ali.,employees
+Can you show me all the engineers on the backend team?,employees
+I need contact info for Fatima Khalil.,employees
+Which team does Sarah Odeh belong to?,employees
+Who manages the frontend team?,employees
+List all DevOps engineers.,employees
+Who should I contact for deployment issues?,employees
+Find all employees working under the DevOps department.,employees
+Show me everyone in management.,employees
+Who leads the backend development team?,employees
+Give me details for Leen Qasem.,employees
+What’s the role of Omar Shalabi?,employees
+Find the Jira username of Adam Smith.,employees
+Who is our Director of Engineering?,employees
+List everyone with the title 'Engineer'.,employees
+What is the team of Hossam Doleh?,employees
+Show me all frontend developers.,employees
+Who are the team leads in the company?,employees
+Find all employees in the Backend department.,employees
+Who works in the same team as Ahmed Ali?,employees
+What is the email of the DevOps Lead?,employees
+Who reports to the CTO?,employees
+Can you list everyone in the engineering department?,employees
+Show contact info for the DevOps Engineer.,employees
+Who is the Senior Backend Engineer?,employees
+What’s the role of Noor Jaber?,employees
+Who should I reach out to for frontend bugs?,employees
+Find the team structure for Harri employees.,employees
+Which department handles deployments?,employees
+List the names and emails of all leads.,employees
+Who is currently responsible for DevOps operations?,employees
+Give me all Jira usernames and their corresponding employees.,employees
+Who can I contact in the Backend team?,employees
+Who leads the DevOps team?,employees
+List everyone in Management.,employees
+Find all people who have 'Engineer' in their title.,employees
+Who handles backend code reviews?,employees
+Find all employees whose email ends with '@harri.com'.,employees
+Who is in charge of technical leadership?,employees
+Show all current employees at Harri.,employees
+"hey, who’s the devops lead again?",employees
+looking for john’s contact info,employees
+can you pull up everyone in HR?,employees
+email for fatima?,employees
+who’s managing the backend folks?,employees
+"yo, need the director’s email",employees
+pls find omar’s role,employees
+any idea who’s in frontend?,employees
+pull up the management staff list,employees
+show me who’s on the devops team,employees
+how do i look up an employee?,employees
+where can i check who’s on the frontend team?,employees
+find employee info by name,employees
+do we have a list of company staff?,employees
+how can i get someone’s contact info?,employees
+how to see who’s in which team?,employees
+can i search employees by department?,employees
+how do i know who reports to who?,employees
+is there a way to check team members?,employees
+where’s the company directory?,employees
+list all staff in backend team,employees
+who are the people in QA?,employees
+show company personnel under marketing,employees
+find all technical staff,employees
+show me our engineering colleagues,employees
+list all members of management,employees
+who are the personnel in devops?,employees
+who’s part of the leadership team?,employees
+get me everyone from engineering staff,employees
+pull all people from frontend department,employees
+list everyone from backend section,employees
+who’s handling infrastructure currently?,employees
+who’s part of company leadership?,employees
+do we have new hires in engineering?,employees
+show me the dev team lineup,employees
+who’s in the tech org chart?,employees
+list personnel grouped by department,employees
+anyone from QA available?,employees
+which team does fatima belong to again?,employees
+find all colleagues under backend,employees
+who’s assigned to devops in jira?,employees
+do we have anyone in the design team?,employees
+list company staff directory,employees
+who’s the head of engineering?,employees
+give me details about technical personnel,employees
+where can i check employee hierarchy?,employees
+What is the status of ticket HARRI-123?,jira_tickets
+Check ticket HARRI-128 for updates.,jira_tickets
+Show me all open Jira tickets.,jira_tickets
+Which tickets are currently in progress?,jira_tickets
+List all high-priority Jira issues.,jira_tickets
+Who is assigned to ticket HARRI-124?,jira_tickets
+Get the summary for Jira task HARRI-125.,jira_tickets
+What’s the current priority of ticket HARRI-127?,jira_tickets
+Find all tickets assigned to Ahmed Ali.,jira_tickets
+Show tickets assigned to 'adam_s'.,jira_tickets
+Which ticket is blocking deployments?,jira_tickets
+Give me open tickets related to backend.,jira_tickets
+Display all critical Jira issues.,jira_tickets
+Which tickets are pending review?,jira_tickets
+Show tickets assigned to frontend engineers.,jira_tickets
+List Jira tickets that failed QA.,jira_tickets
+Which tasks are currently assigned to Lina?,jira_tickets
+What is the highest priority issue open right now?,jira_tickets
+Can you tell me the details of ticket HARRI-126?,jira_tickets
+Find all tickets with ‘deployment’ in summary.,jira_tickets
+Show me open tickets owned by backend leads.,jira_tickets
+Which tickets are still unresolved?,jira_tickets
+Give me all tickets marked as critical.,jira_tickets
+Who’s working on ticket HARRI-128?,jira_tickets
+What’s the progress on the dark mode ticket?,jira_tickets
+List all medium-priority Jira tasks.,jira_tickets
+Which tickets are assigned to the DevOps team?,jira_tickets
+Show all tickets that mention ‘pipeline’.,jira_tickets
+Which tasks are related to onboarding flow?,jira_tickets
+Check all issues owned by ‘fatima_k’.,jira_tickets
+Which tickets are waiting for deployment?,jira_tickets
+What is the status of the payments issue?,jira_tickets
+List tickets created this week.,jira_tickets
+Find any ticket related to CI/CD.,jira_tickets
+Show in-progress Jira tickets.,jira_tickets
+Which open tickets have critical priority?,jira_tickets
+Get details of ticket HARRI-129.,jira_tickets
+Who’s handling the onboarding bug?,jira_tickets
+Find tickets currently assigned to Leen.,jira_tickets
+List all open and high-priority issues.,jira_tickets
+"yo, what’s up with HARRI-128?",jira_tickets
+hey check HARRI-125 please,jira_tickets
+any update on the deployment ticket?,jira_tickets
+can you pull jira status for onboarding bug?,jira_tickets
+what’s happening with the pipeline task?,jira_tickets
+pls show all open jira issues,jira_tickets
+need to see tickets assigned to adam,jira_tickets
+status for harri 123?,jira_tickets
+which tickets are stuck?,jira_tickets
+show everything tagged critical,jira_tickets
+how do i check jira ticket progress?,jira_tickets
+where can i see open issues?,jira_tickets
+find ticket details by id,jira_tickets
+how do i know who owns a ticket?,jira_tickets
+show pending work items in jira,jira_tickets
+list recent jira tasks,jira_tickets
+can i get all tickets for backend team?,jira_tickets
+how to find who’s assigned to an issue?,jira_tickets
+any tickets left unresolved?,jira_tickets
+show jira board status,jira_tickets
+get me all bug reports in jira,jira_tickets
+which tasks are still open?,jira_tickets
+find all project issues assigned to devops,jira_tickets
+who’s responsible for CI/CD tickets?,jira_tickets
+list all tasks related to frontend dashboard,jira_tickets
+show bugs tagged with high severity,jira_tickets
+fetch jira data for payments service,jira_tickets
+who is handling open tasks in engineering?,jira_tickets
+get open tickets per assignee,jira_tickets
+which jira items are waiting review?,jira_tickets
+list all unassigned tickets,jira_tickets
+show me jira issues by priority,jira_tickets
+any ticket for adam_s marked critical?,jira_tickets
+check progress on all tasks tagged ‘onboarding’,jira_tickets
+give jira summary for all open work items,jira_tickets
+which issues are under testing phase?,jira_tickets
+find jira entries that mention docker,jira_tickets
+show me jira updates for this sprint,jira_tickets
+tickets waiting for QA approval?,jira_tickets
+what tickets are marked as failed?,jira_tickets
+give me jira task details for harri 126,jira_tickets
+how many issues are currently active?,jira_tickets
+list open jira issues assigned to QA,jira_tickets
+show unresolved bugs in project,jira_tickets
+any tickets tagged deployment?,jira_tickets
+show recent jira tickets related to onboarding,jira_tickets
+fetch jira ticket HARRI-124 info,jira_tickets
+Show me the latest deployment status.,deployments
+What was the result of the last deployment?,deployments
+List all recent deployments.,deployments
+Which deployments failed this week?,deployments
+When was the last successful deployment for payments?,deployments
+Give me deployment details for the backend service.,deployments
+What version was deployed for onboarding?,deployments
+Show all successful deployments in July.,deployments
+Which service had a failed deployment recently?,deployments
+List deployments for the frontend application.,deployments
+Find the deployment history for onboarding service.,deployments
+Get the latest version deployed to production.,deployments
+Which deployments were successful today?,deployments
+What’s the status of the latest backend release?,deployments
+Show me deployment logs for payments service.,deployments
+Which deployments happened on July 5th?,deployments
+Find failed deployments from last month.,deployments
+Get me all deployment versions for backend.,deployments
+List deployments sorted by date.,deployments
+Show successful production deployments.,deployments
+When was the onboarding app last updated?,deployments
+Which services were deployed this week?,deployments
+Show all production deployment results.,deployments
+Which deployment had errors?,deployments
+Find deployment results by service name.,deployments
+What’s the latest deployment version for frontend?,deployments
+Get details of backend deployments in July.,deployments
+Show recent production rollouts.,deployments
+Find deployment records for payments.,deployments
+Which deployment versions failed recently?,deployments
+Get list of all deployment attempts.,deployments
+What deployments succeeded on July 1st?,deployments
+Show me the most recent release notes.,deployments
+Which environments had new deployments today?,deployments
+Find all deployments made in July 2025.,deployments
+Which deployment failed for backend v3.4.9?,deployments
+Show all deployments by service type.,deployments
+Find deployments tagged as successful.,deployments
+List every service deployed recently.,deployments
+When was the backend last deployed successfully?,deployments
+"yo, did the last deployment go fine?",deployments
+any failed deploys today?,deployments
+what’s up with the payments deployment?,deployments
+show me what got deployed last night,deployments
+did onboarding deploy successfully?,deployments
+pls pull the last few deployments,deployments
+was there a failed deployment this morning?,deployments
+show history for backend releases,deployments
+did the frontend push go through?,deployments
+what version got deployed today?,deployments
+how do i check recent deployments?,deployments
+where can i see deployment results?,deployments
+find deployment history by service name,deployments
+any deployments made recently?,deployments
+how do i know if deployment succeeded?,deployments
+list all past deployment activities,deployments
+can i get status of last few releases?,deployments
+show timeline of deployments,deployments
+get deployment summary for this week,deployments
+find out which versions are live now,deployments
+show devops deployment log,deployments
+list production releases from last week,deployments
+get release data for all services,deployments
+fetch deployment summary for staging,deployments
+what services were deployed yesterday?,deployments
+pull history of production pushes,deployments
+show all app versions currently deployed,deployments
+which deployments were rolled back?,deployments
+get me all deployment attempts for backend,deployments
+was there a rollback recently?,deployments
+show me all July deployments sorted by status,deployments
+any deployments failed during July 2025?,deployments
+find deployment results for frontend service,deployments
+show list of all staging deployments,deployments
+was payments deployed successfully on July 5?,deployments
+which releases were marked successful?,deployments
+show recent release activity across services,deployments
+pull up the deployment summary for onboarding,deployments
+which version of backend was deployed most recently?,deployments
+what deployments occurred between June 27 and July 5?,deployments
+any failed rollouts reported?,deployments
+show latest deployment outcome for each service,deployments
+get last deployment version of every app,deployments
+list deployment dates for payments,deployments
+who triggered the latest deployment?,deployments
+when did backend v3.5.0 go live?,deployments

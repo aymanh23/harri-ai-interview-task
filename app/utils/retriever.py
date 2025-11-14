@@ -37,9 +37,9 @@ class KBRetriever:
 class DynamicRetriever:
     def __init__(self):
         self.intent_to_source = {
-            "employees_info": get_employee_info,
-            "jira_ticket_status": get_jira_tickets,
-            "deployment_history": get_deployments,
+            "employees": get_employee_info,
+            "jira_tickets": get_jira_tickets,
+            "deployments": get_deployments,
         }
 
     def search(self, query:str, intent: str) -> List[Dict]:

@@ -22,9 +22,9 @@ class LLM:
     def __init__(self):
         
         self.generation_config = types.GenerateContentConfig(
-            temperature=0.1,
-            top_p=0.9,
-            top_k=40,
+            temperature=settings.llm_temp,
+            top_p=settings.llm_top_p,
+            top_k=settings.llm_top_k,
             system_instruction=system_instruction,
             response_mime_type="application/json",
             response_schema=LLMResponseModel.model_json_schema()
@@ -34,7 +34,7 @@ class LLM:
 
         
         self.session = self.client.chats.create(
-            model="gemini-2.5-flash-lite",
+            model=settings.llm_model,
             config=self.generation_config,
             history=[],
         )    
@@ -51,9 +51,7 @@ class LLM:
         # send the prompt to the gemini and get the response
         response = self.session.send_message(prompt)
 
-        print(response.text)
         # validate response
-
         try: 
             result = LLMResponseModel.model_validate_json(response.text)
         except Exception:

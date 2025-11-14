@@ -4,13 +4,15 @@ from typing import Set
 
 BASE_DIR = Path(__file__).resolve().parents[1]  # repo root
 
+
 class Settings(BaseModel):
     app_name: str = "Harri AI Assistant"
     version: str = "1.0.0"
+    
 
     # model artifacts
     # model_path: Path = BASE_DIR / "app" / "ml" / "models" / "intent_pipeline.joblib"
-    model_path: Path = BASE_DIR / "app" / "ml" / "models" / "intent_pipeline_calibrated.joblib"
+    model_path: Path = BASE_DIR / "app" / "ml" / "models" / "intent_pipeline.joblib"
     kb_model_name: str = "all-MiniLM-L6-v2"
 
     # data sources
@@ -32,16 +34,20 @@ class Settings(BaseModel):
     # router thresholds
 
     # intents with probability less than this value will not be considered
-    min_confidence: float = 0.55        # below this → probably OOS
+    min_confidence: float = 0.2        # below this → probably OOS
     oos_min_prob: float = 0.35          # min prob to trust "out_of_scope"
     oos_min_margin: float = 0.15        # how much higher than 2nd-best it must be
 
     # mapping of intents to data files
     static_data_intents: Set[str] = {"deployment_process","code_review_policy","escalation_policy","onboarding_guide","team_structure"}
-    dynamic_data_intent: Set[str]= {"deployment_history","employees_info","jira_ticket_status"}
+    dynamic_data_intent: Set[str]= {"deployments","employees","jira_tickets"}
 
 
     # llm config
+    llm_temp : float = 0.1
+    llm_top_p : float = 0.9
+    llm_top_k : int = 40
+    llm_model : str = "gemini-2.5-flash-lite"
 
     
 

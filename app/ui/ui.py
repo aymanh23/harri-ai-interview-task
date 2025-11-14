@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 
-API_URL = "http://localhost:8000/generate"  
+
+BASE_URL = "http://localhost:8000"
 
 
 # -----------------------------------------------------
@@ -78,7 +79,7 @@ for i, msg in enumerate(st.session_state.messages):
                     st.markdown(f"- `{c['source']}`")
 
         # ----------------------------
-        # CLEAN FEEDBACK UI
+        #  FEEDBACK UI
         # ----------------------------
         if msg["role"] == "assistant":
 
@@ -100,7 +101,7 @@ for i, msg in enumerate(st.session_state.messages):
             # YES → send minimal feedback
             if yes_clicked:
                 requests.post(
-                    "http://localhost:8000/feedback",
+                    f"{BASE_URL}/feedback",
                     json={
                         "query": st.session_state.messages[i - 1]["content"],
                         "answer": msg["content"],
@@ -116,7 +117,7 @@ for i, msg in enumerate(st.session_state.messages):
 
                 if st.button("Submit Feedback", key=f"fb_submit_{i}"):
                     requests.post(
-                        "http://localhost:8000/feedback",
+                        f"{BASE_URL}/feedback",
                         json={
                             "query": st.session_state.messages[i - 1]["content"],
                             "answer": msg["content"],
@@ -153,7 +154,7 @@ if user_query:
 
             try:
                 response = requests.post(
-                    API_URL,
+                    f"{BASE_URL}/generate",
                     json={"query": user_query},
                     timeout=60
                 )

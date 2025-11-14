@@ -20,8 +20,6 @@ class IntentClassifier:
         return self
 
     # def predict(self, text: str, prob_threshold: float = 0.1) -> Dict[str, Any]:
-    #     assert self.pipeline is not None, "Call load() first."
-
     #     # Predict probabilities
     #     proba = self.pipeline.predict_proba([text])[0]
     #     classes = self.pipeline.classes_
@@ -60,11 +58,6 @@ class IntentClassifier:
     #     }
 
     def predict(self, text: str, prob_threshold: float | None = None) -> Dict[str, Any]:
-        assert self.pipeline is not None, "Call load() first."
-
-        if prob_threshold is None:
-            prob_threshold = settings.min_confidence  # e.g. 0.55
-
         proba = self.pipeline.predict_proba([text])[0]
         classes = self.pipeline.classes_
 

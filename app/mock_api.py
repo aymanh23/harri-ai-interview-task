@@ -4,8 +4,6 @@ from datetime import datetime
 from typing import Dict, Any, List, Optional
 from app.settings import settings
 
-
-
 def _load_json(filename: str) -> List[Dict[str, Any]]:
     """Reads and parses a JSON file from the data directory."""
     data_path = settings.data_path / filename
