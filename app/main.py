@@ -24,8 +24,6 @@ def initialize_kb_and_logs():
         with open(settings.error_log_file, "w", encoding="utf-8") as f:
             pass  # create empty file
         
-
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], allow_credentials=True,
