@@ -14,6 +14,10 @@ def initialize_kb_and_logs():
     if not os.path.exists(chroma_dir) or len(os.listdir(chroma_dir)) == 0:
         build_kb()
 
+    # create logs dir if it doesnt exist 
+    logs_dir = os.path.dirname(settings.logs_dir)
+    os.makedirs(logs_dir, exist_ok=True)
+
     # create query log file doesnt exist 
     if not os.path.exists(settings.query_log_file):
         with open(settings.query_log_file, "w", encoding="utf-8") as f:

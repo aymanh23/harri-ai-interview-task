@@ -21,7 +21,7 @@ class Settings(BaseModel):
     chroma_dir : Path = data_path / "chroma"
 
     # log directory and files 
-    log_dir : Path = BASE_DIR / "app" / "logs"
+    logs_dir : Path = BASE_DIR / "app" / "logs"
     query_log_file : Path = log_dir / "query_logs.jsonl"
     feedback_log_file : Path = log_dir / "feedback_logs.jsonl"
     error_log_file : Path = log_dir / "error_logs.jsonl"
