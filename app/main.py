@@ -23,6 +23,11 @@ def initialize_kb_and_logs():
     if not os.path.exists(settings.error_log_file):
         with open(settings.error_log_file, "w", encoding="utf-8") as f:
             pass  # create empty file
+    
+    # create error log file if it doesnt exist 
+    if not os.path.exists(settings.feedback_log_file):
+        with open(settings.feedback_log_file, "w", encoding="utf-8") as f:
+            pass  # create empty file
         
 app.add_middleware(
     CORSMiddleware,
