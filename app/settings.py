@@ -31,7 +31,6 @@ class Settings(BaseModel):
     kb_chunk_overlap: int = 80
     kb_k: int = 5  # how many chunks to retrieve per intent
 
-    # router thresholds
 
     # intents with probability less than this value will not be considered
     min_confidence: float = 0.2        # below this → probably OOS
